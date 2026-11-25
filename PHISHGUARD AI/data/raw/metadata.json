@@ -1,0 +1,17 @@
+{
+    "uci_id": 327,
+    "name": "Phishing Websites",
+    "repository_url": "https://archive.ics.uci.edu/dataset/327/phishing+websites",
+    "num_instances": 11055,
+    "num_features": 30,
+    "target_col": [
+        "result"
+    ],
+    "creators": [
+        "Rami Mohammad",
+        "Lee McCluskey"
+    ],
+    "year": 2012,
+    "doi": "10.24432/C51W2X",
+    "citation": "Mohammad, R., Thabtah, F., & McCluskey, L. (2012). An assessment of features related to phishing websites using an automated technique. International Conference for Internet Technology and Secured Transactions."
+}

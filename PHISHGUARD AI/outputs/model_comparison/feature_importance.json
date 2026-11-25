@@ -1,0 +1,50 @@
+{
+    "decision_tree_top10": {
+        "sslfinal_state": 0.6617622586546503,
+        "url_of_anchor": 0.12049666914254008,
+        "links_in_tags": 0.033328989078864474,
+        "having_sub_domain": 0.026257547095479065,
+        "prefix_suffix": 0.02585818703795892,
+        "web_traffic": 0.0250818192413587,
+        "links_pointing_to_page": 0.015047196355093332,
+        "domain_registration_length": 0.012811389887569895,
+        "sfh": 0.009807292518947333,
+        "url_length": 0.007528402414924311
+    },
+    "logistic_regression_top10": {
+        "url_of_anchor": 2.30933353778378,
+        "prefix_suffix": 2.1351682516091266,
+        "sslfinal_state": 1.474155663295036,
+        "sfh": 0.6902206940106475,
+        "links_in_tags": 0.6241117476420158,
+        "having_ip_address": 0.6173730654634478,
+        "web_traffic": 0.5950159660079188,
+        "shortining_service": 0.5096215505847822,
+        "having_sub_domain": 0.5087414583717669,
+        "links_pointing_to_page": 0.4826775114969876
+    },
+    "mlp_top10": {
+        "url_of_anchor": 0.14037279059169772,
+        "sslfinal_state": 0.09261454640374196,
+        "prefix_suffix": 0.07563068810024254,
+        "web_traffic": 0.024493166122510977,
+        "links_pointing_to_page": 0.022068943856918932,
+        "having_ip_address": 0.018334071512453743,
+        "sfh": 0.017160340048135825,
+        "dnsrecord": 0.016771190016330696,
+        "having_sub_domain": 0.016000787661238358,
+        "double_slash_redirecting": 0.014327772464586119
+    },
+    "feature_explanations": {
+        "sslfinal_state": "Assesses whether the HTTPS certificate is issued by a trustworthy Certificate Authority (e.g. VeriSign, GoDaddy) and has valid duration. Phishing sites typically lack trusted certificates or use self-signed certs.",
+        "url_of_anchor": "Measures the proportion of <a> anchor tags in the webpage pointing to an external domain or null javascript/empty hashes (#). Phishing pages often copy legitimate layouts but strip anchor links.",
+        "prefix_suffix": "Detects presence of dash symbols (-) in the domain name. Phishers frequently insert dashes (e.g., paypal-security.com) to impersonate trusted corporate brands.",
+        "web_traffic": "Measures domain web traffic ranking via Alexa / SimilarWeb. Legitimate popular websites rank high; disposable short-lived phishing sites have near-zero ranking.",
+        "having_sub_domain": "Counts domain dot hierarchy. Legitimate domains have 1 or 2 dots, whereas phishers use deep multi-level subdomains (e.g. verify.bank.com.phish.ru) to deceive users.",
+        "links_in_tags": "Examines the ratio of internal vs external URLs inside <meta>, <script>, and <link> tags. Phishing templates often hotlink legitimate site scripts to appear authentic.",
+        "request_url": "Calculates the percentage of external objects (images, videos, multimedia) loaded from an external domain. Phishers load media directly from the real brand domain.",
+        "domain_registration_length": "Checks if domain registration expires within 1 year. Over 90% of phishing domains are purchased on 1-year disposable contracts.",
+        "sfh": "Server Form Handler inspection. If an authentication form submits credentials to a blank URL (\"about:blank\") or external server, it is a high-risk credential harvester.",
+        "having_ip_address": "Checks if an IP address (or hexadecimal notation) is used directly instead of a domain name in the address bar (e.g. http://192.168.1.1/login.php)."
+    }
+}
