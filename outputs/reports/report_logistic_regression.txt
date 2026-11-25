@@ -1,0 +1,27 @@
+===============================================================
+PHISHGUARD AI - SECURITY CLASSIFICATION REPORT: LOGISTIC REGRESSION
+===============================================================
+Accuracy:             0.9281
+Precision (Phishing): 0.9344
+Recall (Phishing):    0.9010
+F1-Score:             0.9174
+ROC-AUC:              0.9785
+Training Time:        0.0589 seconds
+Prediction Time:      0.0031 seconds
+
+Confusion Matrix Details:
+- True Negatives (Benign correctly verified):  1,169
+- False Positives (Benign incorrectly blocked): 62
+- False Negatives (Phishing missed / slipped): 97
+- True Positives (Phishing successfully blocked): 883
+
+Detailed Metrics:
+                        precision    recall  f1-score   support
+
+Legitimate Website (0)     0.9234    0.9496    0.9363      1231
+  Phishing Website (1)     0.9344    0.9010    0.9174       980
+
+              accuracy                         0.9281      2211
+             macro avg     0.9289    0.9253    0.9269      2211
+          weighted avg     0.9283    0.9281    0.9279      2211
+
